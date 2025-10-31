@@ -38,11 +38,11 @@ export default function About() {
           <span className="text-gray-900 text-lg font-bold">Intro</span>
           <br />
           <span className="text-gray-600 text-sm">
-            Hello and welcome to my rick and morty page. Tahnk you for taking
-            your time to see the page. I know it may have some bugs and
-            inconsistencies you can find along the way... but some of them I
-            already consider, but to due time constraint I think its better to
-            leave it for now. Without further ado, lets get started.
+            Hello I am Fred Michael and welcome to my rick and morty page. Tahnk
+            you for taking your time to see the page. I know it may have some
+            bugs and inconsistencies you can find along the way... but some of
+            them I already consider, but to due time constraint I think its
+            better to leave it for now. Without further ado, lets get started.
           </span>
         </p>
 
