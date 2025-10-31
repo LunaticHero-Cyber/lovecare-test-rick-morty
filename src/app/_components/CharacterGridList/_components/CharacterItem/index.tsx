@@ -11,9 +11,9 @@ type Props = {
 
 const CharacterItem = ({ item }: Props) => (
   <Link href={`/character/${item.id}`}>
-    <div className="relative flex flex-col w-fit gap-2.5">
+    <div className="relative flex flex-col gap-2.5">
       <div className="absolute top-0 left-0 w-full h-full z-10 paper"></div>
-      <div className="flex flex-col h-full w-fit py-1 px-2 cursor-pointer gap-1 bg-amber-100 transition-all duration-300 hover:rounded-tr-[64px] shadow-2xl z-20">
+      <div className="flex flex-col h-full py-1 px-2 cursor-pointer gap-1 bg-amber-100 transition-all duration-300 hover:rounded-tr-[64px] shadow-2xl z-20">
         <p className="leading-3.5 align-middle">
           <span className="text-gray-500 text-sm">{`Subject `}</span>
           <br className="flex sm:hidden" />
