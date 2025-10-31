@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+.input-name {
+  @apply max-w-80 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100;
+}
+
+.search-btn {
+  @apply px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100;
+}
+
+.button-group-btn {
+  @apply px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100;
+}
+
+.button-group-btn.start {
+  @apply rounded-s-lg;
+}
+
+.button-group-btn.end {
+  @apply rounded-e-lg;
+}
+
+.button-group-btn.selected {
+  @apply text-gray-900 bg-gray-400 border;
+}

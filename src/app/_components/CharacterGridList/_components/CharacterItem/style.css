@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.paper {
+  background-image: linear-gradient(to bottom left, white, rgb(190, 190, 190));
+}
