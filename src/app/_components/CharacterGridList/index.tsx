@@ -115,13 +115,13 @@ const CharacterGridList = ({
             Ouch! No character with this query found.
           </span>
         </div>
-      ) : null}
-
-      <PageNav
-        navigateBack={navigateBack}
-        navigateNext={navigateNext}
-        paramPage={paramPage}
-      />
+      ) : (
+        <PageNav
+          navigateBack={navigateBack}
+          navigateNext={navigateNext}
+          paramPage={paramPage}
+        />
+      )}
 
       {isLoadingCharacterList ? (
         <div className="grid grow grid-cols-4 gap-5">
