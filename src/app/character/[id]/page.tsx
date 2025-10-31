@@ -121,16 +121,18 @@ export default function Character({
         {!isLoadingCharacter && characterData ? (
           <div className="flex flex-col gap-3">
             <div className="flex flex-row gap-3">
-              <Image
-                className="border-white border-8 border-b-20"
-                src={characterData.image}
-                alt={`Individual ID ${characterData.id} Image`}
-                width={180}
-                height={180}
-                priority
-              />
+              <div className="max-w-1/2">
+                <Image
+                  className="border-white border-8 border-b-20"
+                  src={characterData.image}
+                  alt={`Individual ID ${characterData.id} Image`}
+                  width={180}
+                  height={180}
+                  priority
+                />
+              </div>
 
-              <div className="w-full py-6 px-4 bg-white shadow">
+              <div className="flex flex-col w-full py-6 px-4 bg-white shadow gap-1">
                 <ItemDetail label="Name" value={typedText} />
                 {dataIndex > 0 ? (
                   <ItemDetail label="Gender" value={characterData.gender} />
