@@ -57,6 +57,7 @@ export default function Character({
   useEffect(
     function showRestOfData() {
       if (characterData && index < characterData?.name?.length) {
+        setDataIndex(0);
         return;
       }
 
