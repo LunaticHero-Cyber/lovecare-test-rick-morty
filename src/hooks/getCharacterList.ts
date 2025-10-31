@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import axiosInstance from '@/config/server/axios';
 import { CharacterGender } from '@/interfaces/CharacterGender';
@@ -20,15 +20,15 @@ type Param = {
 };
 
 export default function GetCharacterList(params: Param) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<RickMortyList | undefined>(undefined);
   const [error, setError] = useState<AxiosError | undefined>();
 
   const fetchData = useCallback(async () => {
     try {
+      setIsLoading(true);
       setData(undefined);
       setError(undefined);
-      setIsLoading(true);
       const data = await axiosInstance.get<RickMortyList>(
         `/character${getObjectToQueryParams(params)}`,
       );

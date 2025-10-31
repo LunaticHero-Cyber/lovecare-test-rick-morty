@@ -12,6 +12,7 @@ import getObjectToQueryParams from '@/utlis/getObjectToQueryParams';
 import CharacterItem from './_components/CharacterItem';
 import FilterBar from './_components/FilterBar';
 import PageNav from './_components/PageNav';
+import CharacterItemSkeleton from './_components/CharacterItemSkeleton';
 
 type Props = {
   page: string;
@@ -20,6 +21,7 @@ type Props = {
   name?: string;
   characterList?: Character[];
   characterError?: AxiosError;
+  isLoadingCharacterList: boolean;
 };
 
 const CharacterGridList = ({
@@ -29,6 +31,7 @@ const CharacterGridList = ({
   name: paramName,
   characterList,
   characterError,
+  isLoadingCharacterList,
 }: Props) => {
   const router = useRouter();
 
@@ -114,13 +117,22 @@ const CharacterGridList = ({
         </div>
       ) : null}
 
+      <PageNav
+        navigateBack={navigateBack}
+        navigateNext={navigateNext}
+        paramPage={paramPage}
+      />
+
+      {isLoadingCharacterList ? (
+        <div className="grid grow grid-cols-4 gap-5">
+          <CharacterItemSkeleton />
+          <CharacterItemSkeleton />
+          <CharacterItemSkeleton />
+        </div>
+      ) : null}
+
       {!characterError?.code && characterList?.length ? (
         <>
-          <PageNav
-            navigateBack={navigateBack}
-            navigateNext={navigateNext}
-            paramPage={paramPage}
-          />
           <div className="grid grow grid-cols-4 gap-5">
             {characterList?.map((character) => (
               <CharacterItem key={character.id} item={character} />

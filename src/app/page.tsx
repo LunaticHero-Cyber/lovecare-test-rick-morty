@@ -52,6 +52,7 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-16 bg-transparent">
         <CharacterGridList
           characterList={characterListData?.results}
+          isLoadingCharacterList={isLoadingCharacterList}
           characterError={characterError}
           page={page}
           status={status}

@@ -11,15 +11,15 @@ type Param = {
 };
 
 export default function GetCharacter(params: Param) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<Character | undefined>(undefined);
   const [error, setError] = useState<AxiosError | undefined>();
 
   const fetchData = useCallback(async () => {
     try {
+      setIsLoading(true);
       setData(undefined);
       setError(undefined);
-      setIsLoading(true);
       const data = await axiosInstance.get<Character>(
         `/character/${params.id}`,
       );
