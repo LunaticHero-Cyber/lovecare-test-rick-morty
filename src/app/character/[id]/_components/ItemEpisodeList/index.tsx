@@ -5,7 +5,7 @@ type Props = {
 };
 
 const ItemEpisodeList = ({ episodes }: Props) => (
-  <div className="grid grid-cols-5 gap-3">
+  <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
     {episodes.map((value, index) => {
       return (
         <Link href={value} key={`${value}-${index}`}>
