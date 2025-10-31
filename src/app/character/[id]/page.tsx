@@ -146,6 +146,7 @@ export default function Character({
                 {dataIndex > 3 ? (
                   <p>
                     <span className="text-gray-500 text-lg">{`Status: `}</span>
+                    <br className="flex sm:hidden" />
                     <span
                       className={`text-lg font-bold ${characterData.status.toLowerCase() === 'alive' && 'text-green-400'} ${characterData.status.toLowerCase() === 'dead' && 'text-red-400'} text-gray-900`}
                     >
