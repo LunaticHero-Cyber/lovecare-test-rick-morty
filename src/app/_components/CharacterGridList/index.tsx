@@ -68,10 +68,10 @@ const CharacterGridList = ({
         page: '1',
         status: status,
         gender: paramGender,
-        name: '',
+        name: paramName,
       });
     },
-    [paramGender, pushNewRouter],
+    [paramGender, paramName, pushNewRouter],
   );
 
   const setGender = useCallback(
@@ -80,10 +80,10 @@ const CharacterGridList = ({
         page: '1',
         status: paramStatus,
         gender: gender,
-        name: '',
+        name: paramName,
       });
     },
-    [paramStatus, pushNewRouter],
+    [paramName, paramStatus, pushNewRouter],
   );
 
   const onSearch = useCallback(

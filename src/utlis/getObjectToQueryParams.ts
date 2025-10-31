@@ -10,7 +10,8 @@ const getObjectToQueryParams = (
     // Ensure the property belongs to the object itself and is not undefined
     if (
       Object.prototype.hasOwnProperty.call(queryObject, key) &&
-      queryObject[key] !== undefined
+      queryObject[key] !== undefined &&
+      queryObject[key] !== ''
     ) {
       params.append(key, queryObject[key]);
     }

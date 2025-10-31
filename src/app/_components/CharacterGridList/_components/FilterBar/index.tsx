@@ -1,6 +1,6 @@
 import './style.css';
 
-import { KeyboardEventHandler, useEffect, useState } from 'react';
+import { KeyboardEventHandler, useState } from 'react';
 
 import { CharacterGender } from '@/interfaces/CharacterGender';
 import { CharacterStatus } from '@/interfaces/CharacterStatus';
@@ -127,7 +127,9 @@ const FilterBar = ({
 
         <div className="flex">
           <input
+            placeholder="Subject Name"
             className="input-name"
+            defaultValue={paramNameSearch}
             onChange={(event) => setNameSearch(event.target.value)}
             onKeyDown={handleKeyDown}
           />
